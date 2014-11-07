@@ -5,11 +5,11 @@ Expression is a Word Processor project being developed in Java.
 
 Active Contributors:
 ---------------------
-Lydia @
+Lydia @LyRy 
 
 Brandon Corbett  @Bccorb
 
-Zafar @
+Zafar @ZaZa14
 
 Expression focuses on pleasing graphic design and effective code for a lighting fast easy to use word processor. 
  
