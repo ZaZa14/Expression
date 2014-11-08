@@ -1,20 +1,4 @@
-Expression
-============
 
-Expression is a Word Processor project being developed in Java.
-
-Active Contributors:
----------------------
-Lydia @LyRy 
-
-Brandon Corbett  @Bccorb
-
-Zafar @ZaZa14
-
-Expression focuses on pleasing graphic design and effective code for a lighting fast easy to use word processor. 
- 
- Try to upload the below code in eclipse. Is that wha you have in mind??
- 
 
 import java.awt.*;
 import javax.swing.*;;
