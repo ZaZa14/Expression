@@ -1,7 +1,6 @@
-
-
 import java.awt.*;
-import javax.swing.*;;
+import java.awt.event.*;
+import javax.swing.*;
  
 
 public class TextDemo {
@@ -74,9 +73,9 @@ public class TextDemo {
          //create the window in the center of the screen
         Toolkit tk = Toolkit.getDefaultToolkit();
      		 Dimension dim = tk.getScreenSize();
-     		 int Xpos = (dim.width/5) - (frame.getWidth()/5);
-     		 int Ypos = (dim.height/50) - (frame.getHeight()/50);
-     		 frame.setLocation(Xpos, Ypos);
+     		 int Xpos = (dim.width/5) - (contentPane.getWidth()/5);
+     		 int Ypos = (dim.height/50) - (contentPane.getHeight()/50);
+     		contentPane.setLocation(Xpos, Ypos);
  
         //Create a scrolled text area.
         output = new JTextArea(5, 30);
@@ -91,7 +90,7 @@ public class TextDemo {
 
     private static void createAndShowGUI() {
         //Create and set up the window.
-        JFrame frame = new JFrame("Lydia, Brandon and Zafar text Editor");
+        JFrame frame = new JFrame("Expression");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  
         //Create and set up the content pane.
@@ -113,6 +112,3 @@ public class TextDemo {
         });
     }
 }
- 
- 
-         
