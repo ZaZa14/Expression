@@ -5,6 +5,7 @@ import javax.swing.*;;
  
 
 public class TextDemo {
+
     JTextArea output;
     JScrollPane scrollPane;
  
@@ -47,7 +48,20 @@ public class TextDemo {
         menuItem = new JMenuItem("Find");        
         menu.add(menuItem);        
         
-        menu = new JMenu("About");        
+        menu = new JMenu("About"); 
+         menuItem = new JMenuItem("Help");
+        //for the menuItem Help create an action listener which
+        //displays the message dialog.
+        menuItem.addActionListener(new ActionListener() {			
+			
+          			public void actionPerformed(ActionEvent arg0) {
+          				
+          				JOptionPane.showMessageDialog(null, "Information about this program");
+          				
+          			}
+          		});
+                 
+        menu.add(menuItem);  
         menuBar.add(menu);
         return menuBar;
     }
@@ -56,6 +70,13 @@ public class TextDemo {
         //Create the content-pane-to-be.
         JPanel contentPane = new JPanel(new BorderLayout());
         contentPane.setOpaque(true);
+        
+         //create the window in the center of the screen
+        Toolkit tk = Toolkit.getDefaultToolkit();
+     		 Dimension dim = tk.getScreenSize();
+     		 int Xpos = (dim.width/5) - (frame.getWidth()/5);
+     		 int Ypos = (dim.height/50) - (frame.getHeight()/50);
+     		 frame.setLocation(Xpos, Ypos);
  
         //Create a scrolled text area.
         output = new JTextArea(5, 30);
