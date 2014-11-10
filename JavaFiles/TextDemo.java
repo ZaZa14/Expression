@@ -1,6 +1,6 @@
 //*************************************************************************************
-// Program:			TextDemo.java
-// Programmers:		Brandon Corbett, Z
+// Program:		TextDemo.java
+// Programmers:		
 // Last Modified:	Nov 10, 2014
 // Description:		Creates the GUI for the Expression text editor.
 //*************************************************************************************
