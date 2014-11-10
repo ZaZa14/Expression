@@ -1,10 +1,15 @@
+//*************************************************************************************
+// Program:			TextDemo.java
+// Programmers:		Brandon Corbett, Z
+// Last Modified:	Nov 10, 2014
+// Description:		Creates the GUI for the Expression text editor.
+//*************************************************************************************
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
  
-
-public class TextDemo {
-
+public class TextDemo 
+{
     JTextArea output;
     JScrollPane scrollPane;
  
@@ -51,14 +56,13 @@ public class TextDemo {
          menuItem = new JMenuItem("Help");
         //for the menuItem Help create an action listener which
         //displays the message dialog.
-        menuItem.addActionListener(new ActionListener() {			
-			
-          			public void actionPerformed(ActionEvent arg0) {
-          				
-          				JOptionPane.showMessageDialog(null, "Information about this program");
-          				
-          			}
-          		});
+        menuItem.addActionListener(new ActionListener() 
+        {			
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				JOptionPane.showMessageDialog(null, "Information about this program");
+          	}
+      	});
                  
         menu.add(menuItem);  
         menuBar.add(menu);
@@ -88,7 +92,8 @@ public class TextDemo {
     }
  
 
-    private static void createAndShowGUI() {
+    private static void createAndShowGUI() 
+    {
         //Create and set up the window.
         JFrame frame = new JFrame("Expression");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -103,10 +108,12 @@ public class TextDemo {
         
     }
  
-    public static void main(String[] args) {
-
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
+    public static void main(String[] args) 
+    {
+        javax.swing.SwingUtilities.invokeLater(new Runnable() 
+        {
+            public void run() 
+            {
                 createAndShowGUI();
             }
         });
