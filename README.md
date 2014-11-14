@@ -2,6 +2,7 @@ Expression
 ============
 
 Expression is a Word Processor project being developed in Java.
+Express your self!
 
 Active Contributors:
 ---------------------
