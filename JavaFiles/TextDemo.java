@@ -1,6 +1,6 @@
 //*************************************************************************************
-// Program:		TextDemo.java
-// Programmers:		
+// Program:			TextDemo.java
+// Programmers:		Brandon Corbett, Z
 // Last Modified:	Nov 10, 2014
 // Description:		Creates the GUI for the Expression text editor.
 //*************************************************************************************
@@ -15,48 +15,48 @@ public class TextDemo
  
     public JMenuBar createMenuBar() {
         JMenuBar menuBar;
-        JMenu menu;
-        JMenuItem menuItem;
+        JMenu menu,file, edit, about;
+        JMenuItem menuItem, newDoc, open, save, saveAs, print, exit, undo, copy, paste, find, help;
         //Create the menu bar.
         menuBar = new JMenuBar(); 
         //Build the first menu.
-        menu = new JMenu("File");       
-        menuBar.add(menu); 
+        file = new JMenu("File");       
+        menuBar.add(file); 
         //a group of JMenuItems
-        menuItem = new JMenuItem("New");        
-        menu.add(menuItem);        
-        menuItem = new JMenuItem("Open");
-        menu.add(menuItem);       
-        menu.addSeparator();        
-        menuItem = new JMenuItem("Save");        
-        menu.add(menuItem);
-        menuItem = new JMenuItem("Save As");       
-        menu.add(menuItem);
-        menu.addSeparator();       
-        menuItem = new JMenuItem("Print");        
-        menu.add(menuItem);        
-        menu.addSeparator();        
-        menuItem = new JMenuItem("Exit");        
-        menu.add(menuItem);        
+        newDoc = new JMenuItem("New");        
+        file.add(newDoc);        
+        open = new JMenuItem("Open");
+        file.add(open);       
+        file.addSeparator();        
+        save = new JMenuItem("Save");        
+        file.add(save);
+        saveAs = new JMenuItem("Save As");       
+        file.add(saveAs);
+        file.addSeparator();       
+        print = new JMenuItem("Print");        
+        file.add(print);        
+        file.addSeparator();        
+        exit = new JMenuItem("Exit");        
+        file.add(exit);        
         
-        menu = new JMenu("Edit");        
-        menuBar.add(menu);
-        menuItem = new JMenuItem("Undo");
-        menu.add(menuItem);        
-        menu.addSeparator();
-        menuItem = new JMenuItem("Copy");       
-        menu.add(menuItem);        
-        menuItem = new JMenuItem("Paste");        
-        menu.add(menuItem);
-        menu.addSeparator();
-        menuItem = new JMenuItem("Find");        
-        menu.add(menuItem);        
+        edit = new JMenu("Edit");        
+        menuBar.add(edit);
+        undo = new JMenuItem("Undo");
+        edit.add(undo);        
+        edit.addSeparator();
+        copy = new JMenuItem("Copy");       
+        edit.add(copy);        
+        paste = new JMenuItem("Paste");        
+        edit.add(paste);
+        edit.addSeparator();
+        find = new JMenuItem("Find");        
+        edit.add(find);        
         
-        menu = new JMenu("About"); 
-         menuItem = new JMenuItem("Help");
+        about = new JMenu("About"); 
+         help = new JMenuItem("Help");
         //for the menuItem Help create an action listener which
         //displays the message dialog.
-        menuItem.addActionListener(new ActionListener() 
+        help.addActionListener(new ActionListener() 
         {			
 			public void actionPerformed(ActionEvent arg0) 
 			{
@@ -64,8 +64,8 @@ public class TextDemo
           	}
       	});
                  
-        menu.add(menuItem);  
-        menuBar.add(menu);
+        about.add(help);  
+        menuBar.add(about);
         return menuBar;
     }
  
