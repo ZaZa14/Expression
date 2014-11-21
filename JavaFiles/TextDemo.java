@@ -1,6 +1,6 @@
 //*************************************************************************************
 // Program:			TextDemo.java
-// Programmers:		Brandon Corbett, Z
+// Programmers:		
 // Last Modified:	Nov 10, 2014
 // Description:		Creates the GUI for the Expression text editor.
 //*************************************************************************************
@@ -15,8 +15,8 @@ public class TextDemo
  
     public JMenuBar createMenuBar() {
         JMenuBar menuBar;
-        JMenu menu,file, edit, about;
-        JMenuItem menuItem, newDoc, open, save, saveAs, print, exit, undo, copy, paste, find, help;
+        JMenu file, edit, about;
+        JMenuItem newDoc, open, save, saveAs, print, exit, undo, copy, paste, find, help;
         //Create the menu bar.
         menuBar = new JMenuBar(); 
         //Build the first menu.
