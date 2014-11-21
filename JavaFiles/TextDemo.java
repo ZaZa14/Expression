@@ -12,6 +12,7 @@ public class TextDemo
 {
     JTextArea output;
     JScrollPane scrollPane;
+    String str;
  
     public JMenuBar createMenuBar() {
         JMenuBar menuBar;
@@ -23,7 +24,7 @@ public class TextDemo
         file = new JMenu("File");       
         menuBar.add(file); 
         //a group of JMenuItems
-        newDoc = new JMenuItem("New");        
+        newDoc = new JMenuItem("New"); 
         file.add(newDoc);        
         open = new JMenuItem("Open");
         file.add(open);       
@@ -45,16 +46,59 @@ public class TextDemo
         edit.add(undo);        
         edit.addSeparator();
         copy = new JMenuItem("Copy");       
-        edit.add(copy);        
-        paste = new JMenuItem("Paste");        
+        edit.add(copy); 
+        
+        
+        //method for the copy button
+        //the text should be selected first
+        copy.addMouseListener(new MouseListener() {        	
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				
+				if (output.getSelectedText() != null){ //see if they selected something 
+					str = output.getSelectedText();    			
+					}			
+			}
+			public void mouseExited(MouseEvent arg0) {}
+			
+			public void mouseEntered(MouseEvent arg0) {}
+			
+			public void mouseClicked(MouseEvent arg0) {}
+
+			public void mousePressed(MouseEvent arg0) {}
+		});
+        
+        paste = new JMenuItem("Paste");  
+        
+        //paste method appends the string to the JTextArea
+        paste.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent arg0) {
+				//code for the paste method		
+				output.append(str);
+			}
+		});
+        
         edit.add(paste);
         edit.addSeparator();
         find = new JMenuItem("Find");        
         edit.add(find);        
         
         about = new JMenu("About"); 
-         help = new JMenuItem("Help");
-        //for the menuItem Help create an action listener which
+        help = new JMenuItem("Help");
+        about.add(help);  
+        menuBar.add(about);
+        
+        newDoc.addActionListener(new ActionListener() 
+        {
+			
+			public void actionPerformed(ActionEvent arg0) {
+				// Code for New button
+				createAndShowGUI();
+			}
+		});
+        
+      //for the menuItem Help create an action listener which
         //displays the message dialog.
         help.addActionListener(new ActionListener() 
         {			
@@ -64,8 +108,7 @@ public class TextDemo
           	}
       	});
                  
-        about.add(help);  
-        menuBar.add(about);
+        
         return menuBar;
     }
  
